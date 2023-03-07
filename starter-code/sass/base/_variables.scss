@@ -1,0 +1,11 @@
+:root {
+  // Colors
+  /* 
+    These color variables are later used in utility classes.
+    The colors can be made by using hsl(var(--clr-xyz)), where xyz is the name of the color.
+    The alpha value can be set by using hsla(var(--clr-xyz), a), where a is the alpha value.
+  */
+  --clr-dark: 230 35% 7%;
+  --clr-light: 231 77% 90%;
+  --clr-white: 0 0% 100%;
+}
