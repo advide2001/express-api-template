@@ -112,11 +112,11 @@
 
 /* utility class for setting font family */
 .ff-serif {
-  font-family: var(--ff-serif);
+  font-family: var(--ff-serif); // Bellefair
 }
 .ff-sans-cond {
-  font-family: var(--ff-sans-cond);
+  font-family: var(--ff-sans-cond); // Barlow Condensed
 }
 .ff-sans-normal {
-  font-family: var(--ff-sans-normal);
+  font-family: var(--ff-sans-normal); // Barlow
 }
