@@ -21,6 +21,11 @@
   margin-inline: auto;
 }
 
+// Selects all direct children of .flow except the first child.
+.flow > *:where(:not(:first-child)) {
+  margin-top: var(--flow-space, 1rem);
+}
+
 // screen reader only class.
 // Does not take it out of the DOm just hides it.
 .sr-only {
