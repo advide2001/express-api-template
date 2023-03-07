@@ -1,0 +1,14 @@
+.numbered-title {
+  text-transform: uppercase;
+  font-size: var(--fs-500);
+  font-family: var(--ff-sans-cond);
+  letter-spacing: 4.75px;
+
+  span {
+    font-weight: 700;
+    margin-right: 0.5rem;
+    color: hsl(var(--clr-white) / 0.25);
+  }
+}
+
+// <h2><span>01</span> Colors</h2>
