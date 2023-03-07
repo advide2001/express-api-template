@@ -1,0 +1,63 @@
+/* Utility Classes
+  Do one thing really well and use them everywhere.
+  Allow things to be much more modular and reusable.
+*/
+
+// General Utility Classes ----------------------------------------------
+.flex {
+  display: flex;
+  gap: var(--gap, 1rem);
+}
+
+.grid {
+  display: grid;
+  gap: var(--gap, 1rem);
+}
+
+.container {
+  // -inline only effects the left and right
+  padding-inline: 2em;
+  max-width: 80rem;
+  margin-inline: auto;
+}
+
+// screen reader only class.
+// Does not take it out of the DOm just hides it.
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+// Color Utility Classes ----------------------------------------------
+/* Utility class for setting background color */
+.bg-dark {
+  background-color: hsl(var(--clr-dark));
+}
+
+.bg-accent {
+  background-color: hsl(var(--clr-light));
+}
+
+.bg-white {
+  background-color: hsl(var(--clr-white));
+}
+
+/* Utility class for setting text color */
+.text-dark {
+  color: hsl(var(--clr-dark));
+}
+
+.text-accent {
+  color: hsl(var(--clr-light));
+}
+
+.text-white {
+  color: hsl(var(--clr-white));
+}
