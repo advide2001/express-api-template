@@ -125,3 +125,18 @@
 .ff-sans-normal {
   font-family: var(--ff-sans-normal); // Barlow
 }
+
+// utility class for adding underlines depending on the state of the links
+.underlined-indicators > * {
+  padding: var(--underline-gap, 1rem) 0;
+  border-bottom: 0.2rem solid hsl(var(--clr-white) / 0);
+}
+
+.underlined-indicators > *:hover,
+.underlined-indicators > *:focus {
+  border-bottom: 0.2rem solid hsl(var(--clr-white) / 0.5);
+}
+
+.underlined-indicators > .active {
+  border-bottom: 0.2rem solid hsl(var(--clr-white) / 1);
+}
