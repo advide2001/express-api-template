@@ -1,0 +1,15 @@
+.primary-navigation {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+
+  a {
+    color: hsl(var(--clr-white));
+    text-decoration: none;
+
+    span {
+      font-weight: 700;
+      margin-right: 0.5rem;
+    }
+  }
+}
