@@ -128,7 +128,9 @@
 
 // utility class for adding underlines depending on the state of the links
 .underlined-indicators > * {
+  cursor: pointer;
   padding: var(--underline-gap, 1rem) 0;
+  border: 0;
   border-bottom: 0.2rem solid hsl(var(--clr-white) / 0);
 }
 
@@ -137,6 +139,7 @@
   border-bottom: 0.2rem solid hsl(var(--clr-white) / 0.5);
 }
 
-.underlined-indicators > .active {
+.underlined-indicators > .active,
+.underlined-indicators > [aria-selected="true"] {
   border-bottom: 0.2rem solid hsl(var(--clr-white) / 1);
 }

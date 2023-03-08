@@ -1,0 +1,17 @@
+.dot-indicators > * {
+  cursor: pointer;
+  border: 0;
+  padding: 0.6rem;
+  aspect-ratio: 1;
+  background-color: hsla(var(--clr-white) / 0.25);
+  border-radius: 50%;
+
+  &:hover,
+  &:focus {
+    background-color: hsla(var(--clr-white) / 0.5);
+  }
+
+  &[aria-selected="true"] {
+    background-color: hsl(var(--clr-white));
+  }
+}
