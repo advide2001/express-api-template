@@ -1,8 +1,28 @@
 .large-button {
-  text-decoration: none;
+  position: relative;
   display: grid;
+  z-index: 1;
   place-items: center;
   padding: 0 2em;
-  aspect-ratio: 1/1; // width:height
   border-radius: 50%;
+  aspect-ratio: 1/1; // width:height
+  text-decoration: none;
+}
+
+.large-button::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  background: hsl(var(--clr-white) / 0.15);
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  opacity: 0;
+  transition: opacity 0.3s linear, transform 0.5s ease-in-out;
+}
+
+.large-button:hover::after,
+.large-button:focus::after {
+  opacity: 1;
+  transform: scale(1.5);
 }
