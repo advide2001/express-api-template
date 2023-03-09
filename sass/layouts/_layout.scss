@@ -1,5 +1,5 @@
 /* HOME PAGE LAYOUT */
-@media (min-width: 45em) {
+@media (min-width: 60.25em) {
   .grid-container {
     text-align: left;
     grid-template-columns:
@@ -25,4 +25,18 @@
 
 .home {
   background-image: url("../../images/home/background-home-mobile.jpg");
+  background-size: cover;
+  background-position: bottom center;
+}
+
+@media (min-width: 35em) {
+  .home {
+    background-image: url("../../images/home/background-home-tablet.jpg");
+  }
+}
+
+@media (min-width: 60.25em) {
+  .home {
+    background-image: url("../../images/home/background-home-desktop.jpg");
+  }
 }
