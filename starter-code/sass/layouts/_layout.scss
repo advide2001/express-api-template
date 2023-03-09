@@ -1,0 +1,24 @@
+/* HOME PAGE LAYOUT */
+@media (min-width: 45em) {
+  .grid-container {
+    text-align: left;
+    grid-template-columns:
+      minmax(2rem, 1fr)
+      repeat(2, minmax(0, 40rem))
+      minmax(2rem, 1fr);
+    column-gap: var(--container-gap, 1rem);
+  }
+
+  .grid-container > *:first-child {
+    grid-column: 2;
+  }
+
+  .grid-container > *:last-child {
+    grid-column: 3;
+  }
+
+  .grid-container--home {
+    padding-bottom: max(6rem, 15vh);
+    align-items: end;
+  }
+}
