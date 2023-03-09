@@ -15,11 +15,6 @@
   gap: var(--gap, 1rem);
 }
 
-.grid {
-  display: grid;
-  gap: var(--gap, 1rem);
-}
-
 .container {
   // -inline only effects the left and right
   padding-inline: 2em;
@@ -27,9 +22,27 @@
   margin-inline: auto;
 }
 
+.d-block {
+  display: block;
+}
+
 // Selects all direct children of .flow except the first child.
 .flow > *:where(:not(:first-child)) {
   margin-top: var(--flow-space, 1rem);
+}
+
+.grid {
+  display: grid;
+}
+.grid-container {
+  text-align: center;
+  display: grid;
+  place-items: center;
+  padding-inline: 1.5rem;
+}
+
+.grid-container * {
+  max-width: 55ch;
 }
 
 // screen reader only class.
