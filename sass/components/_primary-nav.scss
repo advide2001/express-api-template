@@ -17,6 +17,10 @@
   }
 }
 
+.mobile-nav-toggle {
+  display: none;
+}
+
 @media (max-width: 35em) {
   .primary-navigation {
     --underline-gap: 0.5rem;
@@ -27,6 +31,7 @@
     padding: min(20rem, 15vh) 2rem;
     margin: 0;
     flex-direction: column;
+    transform: translateX(100%);
 
     &.underlined-indicators > *,
     &.underlined-indicators > *:hover,
@@ -35,5 +40,19 @@
     &.underlined-indicators > [aria-selected="true"] {
       border: none;
     }
+  }
+
+  .mobile-nav-toggle {
+    display: block;
+    position: absolute;
+    z-index: 2000;
+    top: 1rem;
+    right: 1rem;
+    background: transparent;
+    border: none;
+    background-image: url(../../images/shared/icon-hamburger.svg);
+    background-repeat: no-repeat;
+    width: 1.5rem;
+    aspect-ratio: 1/1;
   }
 }
