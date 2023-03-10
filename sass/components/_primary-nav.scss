@@ -1,15 +1,39 @@
 .primary-navigation {
+  --underline-gap: 2rem;
   list-style: none;
   padding: 0;
   margin: 0;
+  background-color: hsl(var(--clr-white) / 0.05);
+  backdrop-filter: blur(1.5rem);
 
   a {
     color: hsl(var(--clr-white));
     text-decoration: none;
 
     span {
-      font-weight: 700;
+      font-weight: 800;
       margin-right: 0.5rem;
+    }
+  }
+}
+
+@media (max-width: 35em) {
+  .primary-navigation {
+    --underline-gap: 0.5rem;
+    position: fixed;
+    inset: 0 0 0 40%;
+    list-style: none;
+    z-index: 100;
+    padding: min(20rem, 15vh) 2rem;
+    margin: 0;
+    flex-direction: column;
+
+    &.underlined-indicators > *,
+    &.underlined-indicators > *:hover,
+    &.underlined-indicators > *:focus,
+    &.underlined-indicators > .active,
+    &.underlined-indicators > [aria-selected="true"] {
+      border: none;
     }
   }
 }
