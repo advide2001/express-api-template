@@ -1,6 +1,7 @@
 import * as z from 'zod';
 
 import { db } from '../../db'; 
+import { WithId } from 'mongodb';
 
 // write validations for the values coming 
 const Todo = z.object({
@@ -9,4 +10,5 @@ const Todo = z.object({
 });
 
 export type Todo = z.infer<typeof Todo>;
+export type TodoWithId = WithId<Todo>; 
 export const Todos = db.collection<Todo>('todos');
