@@ -1,0 +1,23 @@
+{
+  "name": "express-api-template",
+  "version": "1.0.0",
+  "description": "This is an TS + Node JS project template",
+  "main": "index.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/advide2001/express-api-template.git"
+  },
+  "keywords": [
+    "TypeScript",
+    "Node.js"
+  ],
+  "author": "advide2001",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/advide2001/express-api-template/issues"
+  },
+  "homepage": "https://github.com/advide2001/express-api-template#readme"
+}
