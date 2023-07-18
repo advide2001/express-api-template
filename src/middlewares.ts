@@ -1,6 +1,6 @@
-import { NextFunction, Request, Response } from "express";
+import { NextFunction, Request, Response } from 'express';
 
-import ErrorResponse from "./interfaces/ErrorResponse";
+import ErrorResponse from './interfaces/ErrorResponse';
 
 export function notFound(req: Request, res: Response, next: NextFunction) {
   res.status(404);
@@ -8,17 +8,19 @@ export function notFound(req: Request, res: Response, next: NextFunction) {
   next(error);
 }
 
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
 export function errorHandler(
   err: Error,
   req: Request,
-  res: Response<ErrorResponse>,
-  next: NextFunction
+  res: Response<ErrorResponse>
 ) {
-  const statusCode = res.statusCode !== 200 ? res.statusCode : 500;
+  let statusCode = 500;
+  if (res.statusCode !== 200) {
+    statusCode = res.statusCode;
+  }
+
   res.status(statusCode);
   res.json({
     message: err.message,
-    stack: process.env.NODE_ENV === "production" ? "🥞" : err.stack,
+    stack: process.env.NODE_ENV === 'production' ? '🥞' : err.stack
   });
 }
