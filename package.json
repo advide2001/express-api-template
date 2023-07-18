@@ -4,7 +4,9 @@
   "description": "This is an TS + Node JS project template",
   "main": "index.ts",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "rimraf ./build && npx tsc",
+    "start:dev": "npx nodemon ./src/index.ts",
+    "start": "npm run build && npx nodemon ./build/index.js"
   },
   "repository": {
     "type": "git",
@@ -19,5 +21,12 @@
   "bugs": {
     "url": "https://github.com/advide2001/express-api-template/issues"
   },
-  "homepage": "https://github.com/advide2001/express-api-template#readme"
+  "homepage": "https://github.com/advide2001/express-api-template#readme",
+  "devDependencies": {
+    "@types/node": "^20.4.2",
+    "nodemon": "^3.0.1",
+    "rimraf": "^5.0.1",
+    "ts-node": "^10.9.1",
+    "typescript": "^5.1.6"
+  }
 }
